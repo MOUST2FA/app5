@@ -1,0 +1,132 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+$main-color: #0aad0a;
+$white-color:#fff;
+$light-color: #f0f3f2;
+
+// $shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+//   rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+//   rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+
+  $shadow: rgb(35, 234, 13) 0px 2px 4px -1px,
+  rgb(35, 234, 13) 0px 4px 5px 0px,
+  rgb(35, 234, 13) 0px 1px 10px 0px;
+
+$font-family: "Encode Sans Expanded", sans-serif;
+$rating-color: #ffc908;
+$main-transition: 0.8s;
+
+.rating-color {
+  color: $rating-color;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.font-sm {
+  font-size: 14px;
+}
+
+.white-color{
+  color: $white-color;
+}
+
+.text-main {
+  color: $main-color !important;
+}
+
+.text-main-light {
+  color: $light-color;
+}
+
+.text-color{
+  background-color: $main-color !important;
+  color: $white-color !important;
+  border-radius: 5px;
+}
+
+.bg-main {
+  background-color: $main-color !important;
+}
+
+.bg-main-light {
+  background-color: $light-color !important;
+}
+
+.main-btn {
+  border: unset;
+  cursor: pointer;
+  color: #fff !important;
+  background-color: $main-color !important;
+  padding: 4px 8px;
+  transition: background-color $main-transition;
+  border-radius: 5px;
+}
+
+.main-btn:hover {
+  background-color: #08e208;
+}
+
+.main-btn:disabled {
+  background-color: #067a0663 !important;
+  color: #ffffff8e !important;
+  cursor: not-allowed;
+}
+
+.product div{
+  overflow: hidden;
+}
+.product img{
+transition: transform 1s;
+}
+
+.product:hover img{
+  transform: scale(1.1);
+}
+
+i{
+transition: .2s;
+}
+
+.hov {
+  transition:box-shadow 1s,color .5s ,transform 1s;
+  &:hover {
+  cursor: pointer;
+    box-shadow: $shadow;
+    color:#08e208;
+  }
+}
+
+.hovr{
+  transition:box-shadow .6s ,color .5s;
+  &:hover {
+    box-shadow: $shadow;
+    color:#08e208;
+
+  }
+}
+
+.product {
+transition: box-shadow 1s ;
+
+  &:hover {
+    box-shadow: $shadow;
+    border: solid 1px var(--main-color);
+
+    .add-btn {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  .add-btn {
+    transition: transform 1s, opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+#toast-container{
+  margin-top: 65px;
+}

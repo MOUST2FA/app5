@@ -1,0 +1,17 @@
+<section class="mt-5 pt-4 mb-4">
+  <form [formGroup]="checkForm" (ngSubmit)="handleForm()" class="w-50 m-auto shadow rounded p-3 bg-main-light">
+    <div class="form-item my-3">
+      <label for="details">details</label>
+      <input type="text" id="details" formControlName="details" class="form-control">
+    </div>
+    <div class="form-item my-3 ">
+      <label for="phone">phone</label>
+      <input type="tel" id="phone" formControlName="phone" class="form-control">
+    </div>
+    <div class="form-item my-3">
+      <label for="city">city</label>
+      <input type="text" id="city" formControlName="city" class="form-control">
+    </div>
+    <button class="btn bg-main text-white">Check Out</button>
+  </form>
+</section>

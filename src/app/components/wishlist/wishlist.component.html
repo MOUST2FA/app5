@@ -1,0 +1,21 @@
+<section class=" bg-main-light shadow toop">
+  <h2 class="p-3 my-4">My wish List</h2>
+  <div *ngFor="let item of addWishlist" class="row p-3">
+    <div class="col-md-2 g-4">
+      <img class="w-100" [src]="item.imageCover" [alt]="item.title">
+    </div>
+    <div class="col-md-10 mt-5">
+      <div class="mt-2 d-flex justify-content-between">
+        <div>
+          <h3>{{item.title}}</h3>
+          <p class="text-main">{{item.price}} EGP</p>
+          <button (click)="removeData(item._id)" class="btn"><i class="fas fa-trash text-danger"></i> Remove</button>
+        </div>
+        <div>
+          <button (click)="getWishlist(item._id)" class="btn btn-outline-success ">Add To Cart</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

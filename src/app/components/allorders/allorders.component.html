@@ -1,0 +1,16 @@
+<section class="mt-5 pt-4">
+  <div *ngFor="let item of older" class="row my-3">
+    <!-- <div class="col-md-3">
+      <div class="bg-main-light shadow p-3 my-3">
+        <img class="w-100" [src]="item.cartItems.imageCaver"  [alt]="item.title">
+        <h6>{{item.cartItems.count}} EGP</h6>
+      </div>
+    </div> -->
+    <div class="col-md-12">
+      <div class="bg-main-light shadow p-3">
+        <h5 class="my-3">Total Praise : <span class="text-main">{{item.totalOrderPrice}} EGP</span></h5>
+        <h5>payment Method : <span class="text-main ">{{item.paymentMethodType}}</span></h5>
+      </div>
+    </div>
+  </div>
+</section>

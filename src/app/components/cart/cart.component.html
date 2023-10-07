@@ -1,0 +1,33 @@
+<section class="shadow bg-main-light p-3 marg">
+  <div class="d-flex justify-content-between">
+     <div>
+      <h3>Shop Cart</h3>
+      <h5 class="text-main my-4">Total Prise : {{carData.totalCartPrice}} EGP</h5>
+     </div>
+     <div>
+      <button (click)="clear()" class="btn btn-outline-danger">Clear Cart</button>
+     </div>
+  </div>
+    <div *ngFor="let item of carData.products" class="row py-3 border-bottom">
+      <div class="col-md-2">
+        <img class="w-100" [src]="item.product.imageCover" [alt]="item.product.title">
+      </div>
+      <div class="col-md-10 mt-5">
+        <div class="d-flex justify-content-between">
+          <div>
+            <h4>{{item.product.title}}</h4>
+            <h4 class="text-main">Price : {{item.price}}</h4>
+            <button (click)="removeItem(item.product._id)" class="btn"><i class="fas fa-trash text-danger"></i> Remove</button>
+          </div>
+          <div class="hstack">
+            <button (click)="changeCount(item.product._id ,item.count + 1)"  class="btn btn-outline-success">+</button>
+            <span class="p-2">{{item.count}}</span>
+            <button (click)="changeCount(item.product._id ,item.count - 1 )" class="btn btn-outline-success">-</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button [routerLink]="['/payment' ,carData._id ]" class="bg-main text-white btn mt-5  w-100">Online Payment <img src="./assets/images/visa-1.svg" alt=""></button>
+</section>
+
+

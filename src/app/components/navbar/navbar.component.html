@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top mb-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="assets/images/freshcart-logo.svg" alt="">
+    </a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fw-bolder" routerLinkActive="text-color" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bolder" routerLinkActive="text-color" routerLink="/product">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bolder" routerLinkActive="text-color" routerLink="/categories">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bolder" routerLinkActive="text-color" routerLink="/brands">Brands</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bolder" routerLinkActive="text-color" routerLink="/wishlist">WishList <i class="fa-solid fa-heart text-danger"></i></a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+        <li class="nav-item d-flex gap-3 me-3 align-items-center ">
+
+          <a target="_blank" href="https://www.instagram.com"><i class="fab fa-instagram fs-5 text-dark icon1"></i></a>
+          <a target="_blank" href="https://www.facebook.com"> <i class="fab fa-facebook fs-5 text-dark icon2"></i></a>
+          <a target="_blank" href="https://www.tiktok.com"><i class="fab fa-tiktok fs-5 text-dark icon3"></i></a>
+          <a target="_blank" href="https://www.linkedin.com"><i class="fab fa-linkedin fs-5 text-dark icon4" icon1></i></a>
+          <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube fs-5 text-dark icon5"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bolder position-relative" routerLink="/cart"><span class="text-main"><i class="fa-solid fa-cart-shopping fs-3"></i></span>
+          <p class="badge  position-absolute spa fs-6 d-flex ">{{cartCount}}</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bolder" (click)="singOut()" routerLinkActive="text-color" routerLink="Sing Out">Sing Out <i class="fa-solid fa-right-from-bracket fs-6"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

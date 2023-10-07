@@ -1,0 +1,62 @@
+<section class="mt-5 pt-4">
+  <div class="row g-0">
+    <div class="col-md-8">
+      <owl-carousel-o [options]="minSlider">
+        <ng-template carouselSlide>
+          <img height="400" class="w-100" src="./assets/images/main-slider-1.jpeg" alt="img">
+        </ng-template>
+        <ng-template carouselSlide>
+          <img height="400" class="w-100" src="./assets/images/main-slider-2.jpeg" alt="img">
+        </ng-template>
+        <ng-template carouselSlide>
+          <img height="400" class="w-100" src="./assets/images/main-slider-3.jpeg" alt="img">
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+    <div class="col-md-4">
+      <img height="200" class="w-100" src="./assets/images/slide-2.jpeg" alt="img">
+      <img height="200" class="w-100" src="./assets/images/slide-1.jpeg" alt="img">
+    </div>
+  </div>
+</section>
+
+<section>
+<h3 class="my-2">Shop Categories</h3>
+
+  <owl-carousel-o [options]="catSlider">
+
+    <ng-container *ngFor="let item of categories">
+      <ng-template carouselSlide>
+        <img height="200" height="270" [src]="item.image" [alt]="item.name" [title]="item.name">
+        <h3 class="text-main  h6 my-2 text-center">{{item.name}}</h3>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+</section>
+
+<section class="my-4">
+  <div class="row">
+    <div *ngFor="let item of productData" class="col-sm-6 col-md-4 col-lg-3 col-xl-2 g-3">
+      <div class="product p-2">
+        <div [routerLink]="['/details',item.slug,item._id]" class="cursor-pointer">
+          <div>
+            <img height="200" class="w-100" [src]="item.imageCover" alt="">
+          </div>
+          <div class="my-2">
+            <h5 class="text-main">{{item.category.name}}</h5>
+            <h3 class="h6">{{item.title.split(' ',2).join(' ')}}</h3>
+          </div>
+          <div class="d-flex justify-content-between my-3">
+            <span>{{item.price}} EGP</span>
+            <span><i class="fas fa-star rating-color"></i> {{item.ratingsAverage}}</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <button #demo (click)="addWishlist(item._id ,demo)"  class="btn fs-4 cursor-pointer"><i class="fa-solid fa-heart"></i></button>
+        </div>
+        <button (click)="addProduct(item._id)" class="add-btn btn bg-main text-white w-100 my-3">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
